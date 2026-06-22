@@ -1,0 +1,1 @@
+Pop up and resize video player
