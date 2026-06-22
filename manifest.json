@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Extra video player",
+  "version": "1.0.0",
+  "description": "Open the current YouTube video in a simple extra video player popup.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Extra video player"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ]
+}
